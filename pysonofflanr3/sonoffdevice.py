@@ -403,7 +403,7 @@ class SonoffDevice(object):
             # Handle shutdown gracefully by waiting for all tasks
             # to be cancelled
             tasks = asyncio.gather(
-                *self.tasks, loop=self.loop, return_exceptions=True
+                *self.tasks
             )
 
             if self.new_loop:
